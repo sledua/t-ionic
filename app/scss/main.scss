@@ -1,0 +1,84 @@
+@use 'sass:math';
+@import "vars";
+@import "fonts";
+@import "libs";
+@import "rest";
+:root {
+	font-size: 10px; // 1rem = 10px;
+}
+body {
+	font-family: $default-font;
+	color: $text-color;
+	background-color: $bg-color;
+	line-height: 1.5;
+}
+img, picture {
+	max-width: 100%;
+	display: block;
+}
+input,button,textarea,select {
+	font: inherit;
+}
+h1 {
+	font-size: $h1;
+}
+h2 {
+	font-size: $h2;
+}
+h3 {
+	font-size: $h3;
+}
+h4 {
+	font-size: $h4;
+}
+p {
+	font-size: $p;
+}
+h1,h2,h3,h4 {
+	color: $text-h-color;
+}
+.bage {
+	font-family: $roboto-mono;
+	color: $text-badge;
+	font-size: $bage;
+}
+.uppercase {
+	text-transform: uppercase;
+}
+.container {
+	padding-inline: 16em;
+	margin-inline: auto;
+	max-width: 112rem;
+	border: none;
+}
+.flex {
+	display: flex;
+}
+.icon {
+	display: block;
+	width: 100%;
+}
+.card {
+	width: calc(33% - 1rem);
+	height: 33rem;
+	background-color: $bg-card;
+	border-radius: 16px;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: flex-start;
+	flex-wrap: wrap;
+	flex-grow: 0;
+	flex-shrink: 1;
+	padding-left: 32px;
+	margin-right: 30px;
+	> .icon {
+		padding-top: 32px;
+	}
+	> p {
+		line-height: 26px;
+		max-width: 280px;
+		letter-spacing: 0 16px;
+		padding-bottom: 36px;
+	}
+}
+@import "media"; // Always at the end
