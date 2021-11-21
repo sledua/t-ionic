@@ -1,4 +1,5 @@
 @use 'sass:math';
+@use "sass:color";
 @import "vars";
 @import "fonts";
 @import "libs";
@@ -33,9 +34,34 @@ h4 {
 }
 p {
 	font-size: $p;
+	line-height: 26px;
+	letter-spacing: 0 16px;
+}
+a {
+	font-family: $roboto-bold;
+	font-size: $bage;
+	color: $link-simple;
+	border: none;
+	text-decoration: none;
+	outline: none;
+	transition: color 400ms linear;
+	&:hover, &:focus {
+		color: darken($link-simple, 15%);
+	}
+	&:visited {
+		color: darken($link-simple, 35%);
+	}
+	&:focus-visible {
+		border: none;
+		outline: none;
+	}
 }
 h1,h2,h3,h4 {
 	color: $text-h-color;
+}
+.logo {
+	width: 8.5rem;
+	height: 2.7rem;
 }
 .bage {
 	font-family: $roboto-mono;
@@ -75,10 +101,36 @@ h1,h2,h3,h4 {
 		padding-top: 32px;
 	}
 	> p {
-		line-height: 26px;
 		max-width: 280px;
-		letter-spacing: 0 16px;
 		padding-bottom: 36px;
+	}
+}
+.link {
+	position: relative;
+	&::after {
+		//content: '&#x2192';
+		content: '\f178';
+		font-family: $fontawesome;
+		font-size: $bage;
+		margin-left: 0.3rem;
+	}
+}
+.primary {
+	background-color: $bg-link;
+	color: $limk-buttn;
+	padding: 0.2rem 1.5rem 0.3rem 2rem;
+	border-radius: 10rem;
+	transition: background-color 400ms linear;
+	&:hover, &:focus {
+		color: $limk-buttn;
+		background-color: darken($bg-link, 15%);
+	}
+	&:visited {
+		color: darken($limk-buttn, 35%);
+	}
+	&:focus-visible {
+		border: none;
+		outline: none;
 	}
 }
 @import "media"; // Always at the end
