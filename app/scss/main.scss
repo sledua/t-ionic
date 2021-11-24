@@ -117,12 +117,11 @@ h1,h2,h3,h4 {
 }
 .primary {
 	background-color: $bg-link;
-	color: $limk-buttn;
+	color: $limk-buttn !important;
 	padding: 0.2rem 1.5rem 0.3rem 2rem;
 	border-radius: 10rem;
 	transition: background-color 400ms linear;
 	&:hover, &:focus {
-		color: $limk-buttn;
 		background-color: darken($bg-link, 15%);
 	}
 	&:visited {
@@ -131,6 +130,41 @@ h1,h2,h3,h4 {
 	&:focus-visible {
 		border: none;
 		outline: none;
+	}
+}
+header {
+	justify-content: space-between;
+	align-items: center;
+	> nav {
+		line-height: 7.2rem;
+	}
+}
+.navigation {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+	.disable-status {
+		> a {
+			color: $text-nav-sh;
+			font-size: 0.9rem;
+		}
+	}
+	.r-form {
+		margin-right: 1.6rem;
+		> a {
+			font-size: $bage + 0.1;
+		}
+	}
+	> li {
+		margin-right: 3rem;
+		> a {
+			font-family: $roboto-medium;
+			color: $text-nav;
+			font-size: $p;
+		}
+	}
+	.r-form + .r-form {
+		margin-right: 0;
 	}
 }
 @import "media"; // Always at the end
