@@ -108,7 +108,6 @@ h1,h2,h3,h4 {
 .link {
 	position: relative;
 	&::after {
-		//content: '&#x2192';
 		content: '\f178';
 		font-family: $fontawesome;
 		font-size: $bage;
@@ -133,10 +132,13 @@ h1,h2,h3,h4 {
 	}
 }
 header {
-	justify-content: space-between;
-	align-items: center;
-	> nav {
-		line-height: 7.2rem;
+	box-shadow: 0px 2px 4px 0 #0000001f;
+	.container {
+		justify-content: space-between;
+		align-items: center;
+		> nav {
+			line-height: 7.2rem;
+		}
 	}
 }
 .navigation {
@@ -167,4 +169,62 @@ header {
 		margin-right: 0;
 	}
 }
+//* custom lines *//
+.intro {
+	> .info-box {
+		width: 70rem;
+		line-height: 1.1;
+		> h1 {
+			margin-top: 8rem;
+			margin-bottom: 6.6rem;
+		}
+		> p {
+			width: 58rem;
+			margin-bottom: 4.3rem;
+			line-height: 2;
+			font-size: $p + 0.4;
+		}
+		.link-row {
+			align-items: center;
+			> a {
+				display: block;
+				margin-right: 4rem;
+				margin-bottom: 62.2rem;
+			}
+		}
+	}
+	> .imgage-bg {
+		position: absolute;
+		width: 115rem;
+		height: 119rem;
+		z-index: -1;
+	}
+}
+.overview {
+	position: relative;
+	> .info-box {
+		width: 47rem;
+		span {
+			margin-bottom: 2.4rem;
+		}
+		h2 {
+			line-height: 1.1;
+			margin-bottom: 3.4rem;
+		}
+		p + p {
+			margin-top: 2.4rem;
+		}
+		.link {
+			margin-top: 3.2rem;
+		}
+	}
+	> .imgage-bg {
+		position: absolute;
+		width: 60rem;
+		height: 84rem;
+		top: -12rem;
+		right: 8rem;
+	}
+}
+
 @import "media"; // Always at the end
