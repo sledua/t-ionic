@@ -226,5 +226,42 @@ header {
 		right: 8rem;
 	}
 }
-
+.native {
+	padding-top: 16rem;
+	> .card:nth-child(2) {
+		padding-left: 30px;
+		padding-right: 30px;
+	}
+	> .card {
+		background-color: $bg-color;
+		padding-left: 0;
+		margin-right: 0;
+		> .icon {
+			padding-top: 0;
+			flex-grow: 2.5;
+		}
+		> h4 {
+			flex-grow: 2;
+		}
+		> p {
+			flex-grow: 3;
+			padding-bottom: 0;
+			//padding-top: 1.6rem;
+			max-width: 316px;
+			color: $text-color; 
+		}
+	}
+}
+.icons {
+	margin-top: 15rem;
+	margin-bottom: 27.9rem;
+	justify-content: space-around;
+	align-items: center;
+	> .icon:last-child {
+		margin: 0;
+	}
+	> .icon {
+		display: block;
+	}
+}
 @import "media"; // Always at the end
