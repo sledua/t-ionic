@@ -264,4 +264,26 @@ header {
 		display: block;
 	}
 }
+.build {
+	flex-direction: column;
+	&-text {
+		margin-top: 2rem;
+		margin-bottom: 10rem;
+		align-items: flex-end;
+		justify-content: space-between;
+		> * {
+			display: block;
+		}
+		> h2 {
+			max-width: 32rem;
+		}
+		> p {
+			padding-bottom: 2rem;
+			max-width: 42rem;
+		}
+	}
+}
+.ionik-action {
+	margin-top: 30rem;
+}
 @import "media"; // Always at the end
